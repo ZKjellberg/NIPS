@@ -1,10 +1,6 @@
 # Extra Credit Assignment
 
-## Instructions 
-
-Consider the NIPS floating point format.    Words are 32-bits with 1 bit for sign, 8 for exponent, and 23 for mantissa.
-
-The differences from MIPS are that for NIPS
+Consider the NIPS floating point format. Words are 32-bits with 1 bit for sign, 8 for exponent, and 23 for mantissa. The differences from MIPS are that for NIPS
 
 1. The bias is 80 (hex) rather than 7F that MIPS uses
 2. Mantissas are normalized to .1xxxxxx rather than 1.xxxx like MIPS and the “hidden bit” technique is not used.
