@@ -7,6 +7,19 @@ Type | BIAS | Mantissa
 MIPS | 7F   | [1].####
 NIPS | 80   | [0].1###
 
+### Comparison of values
+
+Type | HEX Value | Sign | Exponent  | Mantissa
+:--: | :-------: | :--: | :-------: | :------:
+MIPS | 3EA0 0000 | 0    | 7D (2^-2) | [1].01
+NIPS | 3FD0 0000 | 0    | 7F (2^-1) | [0].101
+
+## Possible Implementation
+
+1. Update mantissa by with a shift right logical for bits 15-0 a single position.
+1. Add 1 to bit 15 for hidden bit.
+1. Add 2 to bits 27-24 (exponent)
+
 ## MIPS 40A8 0000
 
 Type   | 31-28 | 27-24 | 23-20 | 19-16 | 15-0
@@ -77,16 +90,3 @@ Type   | 31-28 | 27-24 | 23-20 | 19-16 | 15-0
 :----: | :---: | :---: | :---: | :---: | :-----------------:
 Binary | 0011  | 1111  | 1101  | 0000  | 0000 0000 0000 0000
 HEX    | 3     | F     | D     | 0     | 0 0 0 0
-
-### Comparison of values
-
-Type | HEX Value | Sign | Exponent  | Mantissa
-:--: | :-------: | :--: | :-------: | :------:
-MIPS | 3EA0 0000 | 0    | 7D (2^-2) | [1].01
-NIPS | 3FD0 0000 | 0    | 7F (2^-1) | [0].101
-
-## Possible Implementation
-
-1. Update mantissa by with a shift right logical for bits 15-0 a single position.
-1. Add 1 to bit 15 for hidden bit.
-1. Add 2 to bits 27-24 (exponent)
