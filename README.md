@@ -1,5 +1,7 @@
 # Extra Credit Assignment
 
+## Instructions 
+
 Consider the NIPS floating point format.    Words are 32-bits with 1 bit for sign, 8 for exponent, and 23 for mantissa.
 
 The differences from MIPS are that for NIPS
@@ -31,8 +33,10 @@ Type | HEX Value | Sign | Exponent  | Mantissa
 MIPS | 3EA0 0000 | 0    | 7D (2^-2) | [1].01
 NIPS | 3FD0 0000 | 0    | 7F (2^-1) | [0].101
 
-## Possible Implementation
+## Algorithm to convert from MIPS to NIPS
 
-1. Update mantissa by with a shift right logical for bits 15-0 a single position.
-1. Add 1 to bit 15 for hidden bit.
-1. Add 2 to bits 27-24 (exponent)
+1. Extract mantissa from HEX value by using a MASK for bits 22-0.
+2. Use Shift Right Logical to shift the mantissa a single digit.
+3. Add 4194304 (2^22) to the mantissa to unhide the hidden bit.
+4. Zeroize the original mantissa and replace it with its updated value.
+5. To convert the exponent, we need to increase its value by 2 which can be done by adding 16777216 (2^24).
