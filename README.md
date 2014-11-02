@@ -7,8 +7,7 @@ Consider the NIPS floating point format. Words are 32-bits with 1 bit for sign, 
  
 Write a program ( using any language you choose ) to convert the following MIPS floating point data to the NIPS format showing the result as a 32-bit hexadecimal result.  Include your source code when your submit your results.  Also,  provide a brief description of what you did.
  
-1. MIPS 40A8 0000 -> NIPS ?
-1. MIPS 3EA0 0000 -> NIPS ?
+Values to convert from MIPS to NIPS: MIPS 40A8 0000, MIPS 3EA0 0000
 
 # MIPS vs NIPS
 
