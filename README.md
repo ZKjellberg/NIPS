@@ -31,5 +31,5 @@ In both scenarios, the exponent is increased by 2 and the mantissa is shifted to
 1. Extract mantissa from HEX value by using a MASK for bits 22-0.
 2. Use Shift Right Logical to shift the mantissa a single digit.
 3. Add 4194304 (2^22) to the mantissa to unhide the hidden bit.
-4. Zeroize the original mantissa and replace it with its updated value.
+4. Zeroize the source's mantissa and replace it with its updated value.
 5. To convert the exponent, we need to increase its value by 2 which can be done by adding 16777216 (2^24).
