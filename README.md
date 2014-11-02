@@ -1,13 +1,9 @@
 # Extra Credit Assignment
 
-Consider the NIPS floating point format. Words are 32-bits with 1 bit for sign, 8 for exponent, and 23 for mantissa. The differences from MIPS are that for NIPS
-
-1. The bias is 80 (hex) rather than 7F that MIPS uses
-2. Mantissas are normalized to .1xxxxxx rather than 1.xxxx like MIPS and the “hidden bit” technique is not used.
- 
 Write a program ( using any language you choose ) to convert the following MIPS floating point data to the NIPS format showing the result as a 32-bit hexadecimal result.  Include your source code when your submit your results.  Also,  provide a brief description of what you did.
  
-Values to convert from MIPS to NIPS: MIPS 40A8 0000, MIPS 3EA0 0000
+1. MIPS 40A8 0000
+1. MIPS 3EA0 0000
 
 # MIPS vs NIPS
 
