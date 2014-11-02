@@ -1,5 +1,7 @@
 # Extra Credit Assignment
 
+Write a program ( using any language you choose ) to convert the following MIPS floating point data to the NIPS format showing the result as a 32-bit hexadecimal result.  Include your source code when your submit your results.  Also,  provide a brief description of what you did.
+
 Type | BIAS | Mantissa
 :--: | :--: | :------:
 MIPS | 7F   | [1].####
