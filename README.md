@@ -33,6 +33,8 @@ Type | HEX Value | Sign | Exponent  | Mantissa
 MIPS | 3EA0 0000 | 0    | 7D (2^-2) | [1].01
 NIPS | 3FD0 0000 | 0    | 7F (2^-1) | [0].101
 
+In both scenarios, the exponent is increased by 2 and the mantissa is shifted to the right once and has the hidden bit reintroduced.
+
 ## Algorithm to convert from MIPS to NIPS
 
 1. Extract mantissa from HEX value by using a MASK for bits 22-0.
